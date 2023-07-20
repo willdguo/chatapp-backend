@@ -20,6 +20,8 @@ roomsRouter.post('/', async (request, response) => {
         messages: []
     })
 
+    console.log(newRoom)
+
     await newRoom.save()
     response.status(201).json(newRoom)
 })
